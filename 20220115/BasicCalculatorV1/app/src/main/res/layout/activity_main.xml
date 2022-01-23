@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--계산기 출력 부분-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <!--right + bottom 속성 -->
+        <TextView
+            android:id="@+id/tv_output_expression"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="right|bottom"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <!--right + bottom 속성 -->
+            <TextView
+                android:id="@+id/tv_output"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|bottom"
+                android:text="0"
+                android:textSize="30dp" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--계산기 버튼 부분 #1 ( AC, +/-, %, / )-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_question" />
+
+        <Button
+            android:id="@+id/btn_ac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/img_ac" />
+
+        <Button
+            android:id="@+id/btn_pecent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="%"/>
+
+        <Button
+            android:id="@+id/btn_division"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/"/>
+
+    </LinearLayout>
+
+
+    <!--계산기 버튼 부분 #2 ( 1, 2, 3, + )-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_number_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <Button
+            android:id="@+id/btn_number_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+
+        <Button
+            android:id="@+id/btn_number_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <!--계산기 버튼 부분 #2 ( 0, ., = )-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_number_0"
+            android:text="0"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_period"
+            android:text="."/>
+
+        <Button
+            android:id="@+id/btn_equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="=" />
+
+    </LinearLayout>
+
+</LinearLayout>
